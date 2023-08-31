@@ -1,0 +1,10 @@
+Was wird gemacht?
+
+1. ioBroker wird gestoppt
+2. ein Backup wird erstellt
+3. das Update wird durchgeführt
+4. Probleme werden behoben und im Anschluss wird ioBroker wieder gestartet
+5. geduldig warten!!!
+
+Je nach Backupgröße, Schreibgeschwindigkeit kann es paar minuten dauern!
+Der Bildschirm ist und bleibt in dieser Zeit Schwarz - geduld!
