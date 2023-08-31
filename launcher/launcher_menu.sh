@@ -24,19 +24,19 @@ case $menu in
     # UPDATER
 	01)
 		clear
-        bash -c "$(wget -qLO - http://192.168.191.209:3000/marek/launcher2/raw/branch/main/apt/launcher_updates.sh)"
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/launcher_updates.sh)"
 	;;
 
     # INSTALLER
 	02)
 	    clear
-        bash -c "$(wget -qLO - http://192.168.191.209:3000/marek/launcher2/raw/branch/main/installs/launcher_installs.sh)"
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/installs/launcher_installs.sh)"
 	;;
 
     # TOOLS
 	03)
 	    clear
-        bash -c "$(wget -qLO - http://192.168.191.209:3000/marek/launcher2/raw/branch/main/tools/launcher_tools.sh)"
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/tools/launcher_tools.sh)"
 	;;
 
 	255)
