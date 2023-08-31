@@ -22,7 +22,7 @@ case $menu in
     # Reboot
 	01)
 		clear
-        bash -c "$(wget -qLO - http://192.168.191.209:3000/marek/launcher2/raw/branch/main/tools/reboot.sh)"
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/tools/reboot.sh)"
 	;;
     
 	255)
