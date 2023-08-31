@@ -25,25 +25,25 @@ case $menu in
     # PiHole Install
 	01)
 		clear
-        bash -c "$(wget -qLO - http://192.168.191.209:3000/marek/launcher2/raw/branch/main/installs/pihole.sh)"
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/installs/pihole.sh)"
 	;;
 
     # ioBroker Install
 	02)
 	    clear
-        bash -c "$(wget -qLO - http://192.168.191.209:3000/marek/launcher2/raw/branch/main/installs/iobroker.sh)"
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/installs/iobroker.sh)"
 	;;
 
     # Docker Install
 	03)
 	    clear
-        bash -c "$(wget -qLO - http://192.168.191.209:3000/marek/launcher2/raw/branch/main/installs/docker.sh)"
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/installs/docker.sh)"
 	;;
 
     # Portainer Install
 	04)
         clear
-        bash -c "$(wget -qLO - http://192.168.191.209:3000/marek/launcher2/raw/branch/main/installs/portainer.sh)"
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/installs/portainer.sh)"
 	;;
 
 	255)
