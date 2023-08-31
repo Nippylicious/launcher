@@ -28,43 +28,43 @@ case $menu in
     # apt update
 	01)
 		clear
-        bash -c "$(wget -qLO - http://192.168.191.209:3000/marek/launcher2/raw/branch/main/apt/apt_update.sh)"
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/apt_update.sh)"
 	;;
 
     # apt list --upgradeable
 	02)
 	    clear
-        bash -c "$(wget -qLO - http://192.168.191.209:3000/marek/launcher2/raw/branch/main/apt/apt_list.sh)"
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/apt_list.sh)"
 	;;
 
     # apt upgrade
 	03)
 	    clear
-        bash -c "$(wget -qLO - http://192.168.191.209:3000/marek/launcher2/raw/branch/main/apt/apt_upgrade.sh)"
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/apt_upgrade.sh)"
 	;;
 
     # pihole -up
 	04)
         clear
-        bash -c "$(wget -qLO - http://192.168.191.209:3000/marek/launcher2/raw/branch/main/updates/pihole_update.sh)"
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/updates/pihole_update.sh)"
 	;;
 
     # iobroker update
     05)
         clear
-        bash -c "$(wget -qLO - http://192.168.191.209:3000/marek/launcher2/raw/branch/main/updates/iobroker_update.sh)"
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/updates/iobroker_update.sh)"
     ;;
 
     # Portainer updaten
     06)
         clear
-        bash -c "$(wget -qLO - http://192.168.191.209:3000/marek/launcher2/raw/branch/main/updates/portainer_update.sh)"
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/updates/portainer_update.sh)"
     ;;
 
     # Skript aktualisieren
     07)
         clear
-        bash -c "$(wget -qLO - http://192.168.191.209:3000/marek/launcher2/raw/branch/main/updates/updater.sh)"
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/updates/updater.sh)"
     ;;
 
 	255)
