@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Mareks Launcher Updates
-# VERSION="31.08.2023"
+VERSION="05.09.2023"
 # ===========================
 
 menu=$( \
@@ -10,13 +10,14 @@ menu=$( \
         --title "Mareks Updates Launcher" \
         --cancel-button "Beenden" \
         --menu " \n Bitte eine Funktion waehlen" 18 64 8 \
-            "01" "  SYSTEM      | Paketquellen aktualisieren" \
-            "02" "  SYSTEM      | Verfuegbare Updates anzeigen" \
-            "03" "  SYSTEM      | Systemupgrade durchfuehren" \
-            "04" "  PiHole      | aktualisieren" \
-            "05" "  ioBroker    | NodeJS aktualisieren"\
-            "06" "  Portainer   | aktualisieren"\
-            "07" "  Launcher    | aktualisieren"\
+            "01" "  SYSTEM      | ALL-IN-ONE System Updater" \
+	    "02" "  SYSTEM      | Paketquellen aktualisieren" \
+            "03" "  SYSTEM      | Verfuegbare Updates anzeigen" \
+            "04" "  SYSTEM      | Systemupgrade durchfuehren" \
+            "05" "  PiHole      | aktualisieren" \
+            "06" "  ioBroker    | NodeJS aktualisieren"\
+            "07" "  Portainer   | aktualisieren"\
+            "08" "  Launcher    | aktualisieren"\
         3>&1 1>&2 2>&3)
 
 #14 60 6
@@ -25,50 +26,56 @@ menu=$( \
 #Auswertung
 case $menu in
 
+    # all-in-one updater
+    	01)
+     	clear
+	bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/apt_aio.sh)"
+ 	;;
+
     # apt update
-	01)
-		clear
+	02)
+	clear
         bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/apt_update.sh)"
 	;;
 
     # apt list --upgradeable
-	02)
-	    clear
+	03)
+	clear
         bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/apt_list.sh)"
 	;;
 
     # apt upgrade
-	03)
-	    clear
+	04)
+	clear
         bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/apt_upgrade.sh)"
 	;;
 
     # pihole -up
-	04)
+	05)
         clear
         bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/updates/pihole_update.sh)"
 	;;
 
     # iobroker update
-    05)
+    	06)
         clear
         bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/updates/iobroker_update.sh)"
     ;;
 
     # Portainer updaten
-    06)
+    	07)
         clear
         bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/updates/portainer_update.sh)"
     ;;
 
     # Skript aktualisieren
-    07)
+    	08)
         clear
         bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/updates/updater.sh)"
     ;;
 
 	255)
-		echo "Tastenverwendung: ESC-Taste"
+	echo "Tastenverwendung: ESC-Taste"
         ./launcher.sh
 	;;
 
