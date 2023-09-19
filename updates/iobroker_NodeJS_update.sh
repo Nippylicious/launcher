@@ -1,8 +1,9 @@
 #!/bin/bash
 #
 # Mareks Updateskript
-# iobroker-update
+# iobroker-NodeJS-update
 # ===========================
+
 
 echo "ioBroker Backup wird jetzt erstellt... Bitte warten"
 iobroker stop
