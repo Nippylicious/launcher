@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Mareks Launcher Updates
-VERSION="05.09.2023"
+VERSION="19.09.2023"
 # ===========================
 
 menu=$( \
@@ -16,8 +16,9 @@ menu=$( \
             "04" "  SYSTEM      | Systemupgrade durchfuehren" \
             "05" "  PiHole      | aktualisieren" \
             "06" "  ioBroker    | NodeJS aktualisieren"\
-            "07" "  Portainer   | aktualisieren"\
-            "08" "  Launcher    | aktualisieren"\
+	    "07" "  ioBroker    | JS-Controller aktualisieren"\
+            "08" "  Portainer   | aktualisieren"\
+            "09" "  Launcher    | aktualisieren"\
         3>&1 1>&2 2>&3)
 
 #14 60 6
@@ -56,20 +57,26 @@ case $menu in
         bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/updates/pihole_update.sh)"
 	;;
 
-    # iobroker update
+    # iobroker NodeJS update
     	06)
         clear
-        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/updates/iobroker_update.sh)"
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/updates/iobroker_NodeJS_update.sh)"
+    ;;
+
+    # iobroker JS Controller update
+    	07)
+     	clear
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/updates/iobroker-jsController-update.sh)"
     ;;
 
     # Portainer updaten
-    	07)
+    	08)
         clear
         bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/updates/portainer_update.sh)"
     ;;
 
     # Skript aktualisieren
-    	08)
+    	09)
         clear
         bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/updates/updater.sh)"
     ;;
