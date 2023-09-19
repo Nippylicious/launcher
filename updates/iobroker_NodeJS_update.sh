@@ -4,6 +4,8 @@
 # iobroker-NodeJS-update
 # ===========================
 
+echo "es wird nach aktuelleren Paketquellen gesucht... Bitte warten"
+apt update
 
 echo "ioBroker Backup wird jetzt erstellt... Bitte warten"
 iobroker stop
