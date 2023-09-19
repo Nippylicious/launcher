@@ -66,7 +66,7 @@ case $menu in
     # iobroker JS Controller update
     	07)
      	clear
-        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/updates/iobroker-jsController-update.sh)"
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/updates/iobroker_jsController_update.sh)"
     ;;
 
     # Portainer updaten
