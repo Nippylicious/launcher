@@ -7,6 +7,8 @@
 echo "es wird nach aktuelleren Paketquellen gesucht... Bitte warten"
 apt update
 
+clear
+
 echo "ioBroker Backup wird jetzt erstellt... Bitte warten"
 iobroker stop
 cd /opt/iobroker
