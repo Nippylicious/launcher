@@ -9,7 +9,7 @@ menu=$( \
         --backtitle "Version $VERSION" \
         --title "Mareks Updates Launcher" \
         --cancel-button "Beenden" \
-        --menu " \n Bitte eine Funktion waehlen" 18 64 8 \
+        --menu " \n Bitte eine Funktion waehlen" 20 64 8 \
             "01" "  SYSTEM      | ALL-IN-ONE System Updater" \
 	    "02" "  SYSTEM      | Paketquellen aktualisieren" \
             "03" "  SYSTEM      | Verfuegbare Updates anzeigen" \
