@@ -2,6 +2,7 @@
 #
 # Mareks Updateskript
 # iobroker-NodeJS-update
+VERSION=18 #Aktuelle NodeJS Version
 # ===========================
 
 echo "es wird nach aktuelleren Paketquellen gesucht... Bitte warten"
@@ -21,13 +22,13 @@ nodeversion_alt=$(node -v)
 npmversion_alt=$(npm -v)
 
 whiptail --msgbox "Die aktuell installierte Version \n \n Node: $nodeversion_alt" 10 40
-VERSION=$(whiptail --inputbox "auf Welche Node Version soll geupdatet werden?" 8 60 --title "Example Dialog" 3>&1 1>&2 2>&3)
-exitstatus=$?
-if [ $exitstatus = 0 ]; then
+#VERSION=$(whiptail --inputbox "auf Welche Node Version soll geupdatet werden?" 8 60 --title "Example Dialog" 3>&1 1>&2 2>&3)
+#exitstatus=$?
+#if [ $exitstatus = 0 ]; then
     curl -sL https://deb.nodesource.com/setup_"$VERSION".x | sudo -E bash -
-else
-    echo "abbruch"
-fi
+#else
+#    echo "abbruch"
+#fi
 
 apt-get install -y nodejs  
 nodeversion_neu=$(node -v)
