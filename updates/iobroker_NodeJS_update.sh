@@ -22,6 +22,7 @@ nodeversion_alt=$(node -v)
 npmversion_alt=$(npm -v)
 
 whiptail --msgbox "Die aktuell installierte Version \n \n Node: $nodeversion_alt" 10 40
+sleep 5
 #VERSION=$(whiptail --inputbox "auf Welche Node Version soll geupdatet werden?" 8 60 --title "Example Dialog" 3>&1 1>&2 2>&3)
 #exitstatus=$?
 #if [ $exitstatus = 0 ]; then
