@@ -19,7 +19,7 @@ if (whiptail --title "ioBroker Backup" --yesno "Soll ein ioBroker Backup erstell
 
     cd /opt/iobroker
     iobroker backup
-    #whiptail --title "Info" --msgbox "ioBroker Backup wurde erstellt." 8 78
+    whiptail --title "Info" --msgbox "ioBroker Backup wurde erstellt." 8 78
     
     clear
 else
@@ -32,7 +32,7 @@ fi
 #sleep 10 #Wartezeit damit ioBroker vernünftig stoppen kann
 #cd /opt/iobroker
 #iobroker backup
-whiptail --title "Info" --msgbox "ioBroker Backup wurde erstellt." 8 78
+#whiptail --title "Info" --msgbox "ioBroker Backup wurde erstellt." 8 78
 
 clear
 
