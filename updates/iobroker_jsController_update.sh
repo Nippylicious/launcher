@@ -9,11 +9,24 @@ apt update
 
 clear
 
-echo "ioBroker Backup wird jetzt erstellt... Bitte warten"
-iobroker stop
-cd /opt/iobroker
-iobroker backup
-whiptail --title "Info" --msgbox "ioBroker Backup wurde erstellt." 8 78
+if (whiptail --title "ioBroker Backup" --yesno "Soll ein ioBroker Backup erstellt werden?" 8 78); then
+    #TRUE
+    echo "ioBroker Backup wird jetzt erstellt... Bitte warten"
+    iobroker stop
+    
+    sleep 10 #Wartezeit damit ioBroker vernünftig stoppen kann
+
+    cd /opt/iobroker
+    iobroker backup
+    whiptail --title "Info" --msgbox "ioBroker Backup wurde erstellt." 8 78
+    
+    clear
+else
+    #FALSE
+    clear
+fi
+
+clear
 
 echo "ioBroker JS Controller wird geupdatet"
 iobroker update
