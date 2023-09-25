@@ -27,20 +27,12 @@ else
     clear
 fi
 
-#echo "ioBroker Backup wird jetzt erstellt... Bitte warten"
-#iobroker stop
-#sleep 10 #Wartezeit damit ioBroker vernünftig stoppen kann
-#cd /opt/iobroker
-#iobroker backup
-#whiptail --title "Info" --msgbox "ioBroker Backup wurde erstellt." 8 78
-
 clear
 
 nodeversion_alt=$(node -v)
 npmversion_alt=$(npm -v)
 
 whiptail --msgbox "Die aktuell installierte Version \n \n Node: $nodeversion_alt" 10 40
-sleep 5
 #VERSION=$(whiptail --inputbox "auf Welche Node Version soll geupdatet werden?" 8 60 --title "Example Dialog" 3>&1 1>&2 2>&3)
 #exitstatus=$?
 #if [ $exitstatus = 0 ]; then
