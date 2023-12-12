@@ -28,6 +28,7 @@ else
 fi
 
 clear
+iobroker stop
 
 nodeversion_alt=$(node -v)
 npmversion_alt=$(npm -v)
