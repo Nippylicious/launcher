@@ -28,7 +28,7 @@ fi
 
 clear
 
-echo "ioBroker JS Controller wird geupdatet"
+# echo "ioBroker JS Controller wird geupdatet"
 iobroker update
 iobroker upgrade self
 iobroker fix
