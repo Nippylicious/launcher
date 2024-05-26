@@ -33,29 +33,32 @@ menu=$( \
 #Auswertung
 case $menu in
 
-    # all-in-one updater
-    	01)
-     	clear
-	bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/apt_aio.sh)"
+    # Paket all-in-one updater
+    01)
+        clear
+	    # 26.05.2024 |bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/apt_aio.sh)"
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/paket_aio.sh)" 
  	;;
 
     # Paket Update
 	02)
-	clear
+	    clear
         # 26.05.2024 | bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/apt_update.sh)"
         bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/paket_update.sh)"
 	;;
 
-    # apt list --upgradeable
+    # Paket list --upgradeable
 	03)
-	clear
-        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/apt_list.sh)"
+	    clear
+        # 26.05.2024 | bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/apt_list.sh)"
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/paket_list_upgradeable.sh)"
 	;;
 
-    # apt upgrade
+    # Paket Upgrade
 	04)
-	clear
-        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/apt_upgrade.sh)"
+	    clear
+        # 26.05.2024 |bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/apt_upgrade.sh)"
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/paket_upgrade.sh)"
 	;;
 
     # pihole -up
@@ -65,25 +68,25 @@ case $menu in
 	;;
 
     # iobroker NodeJS update
-    	06)
+    06)
         clear
         bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/updates/iobroker_NodeJS_update.sh)"
     ;;
 
     # iobroker JS Controller update
-    	07)
+    07)
      	clear
         bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/updates/iobroker_jsController_update.sh)"
     ;;
 
     # Portainer updaten
-    	08)
+    08)
         clear
         bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/updates/portainer_update.sh)"
     ;;
 
     # Skript aktualisieren
-    	09)
+    09)
         clear
         bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/updates/updater.sh)"
     ;;
