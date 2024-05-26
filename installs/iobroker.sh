@@ -1,8 +1,14 @@
 #!/bin/bash
-#
+
 # Mareks Updateskript
-# iobroker install
-# ===========================
+# 26.05.2024
+# ioBroker Installer
+#
+# =====================#
+# ┓                 ┓  #
+# ┣┓┏┓┏┏┓┏┓┏┳┓┏┓┏┓┏┓┃┏ #
+# ┗┛┗┻┗┗┛┛┗┛┗┗┗┻┛ ┗ ┛┗ #
+# =====================#
 
 apt update
 apt install curl -y

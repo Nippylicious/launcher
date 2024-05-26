@@ -1,8 +1,14 @@
 #!/bin/bash
-#
+
 # Mareks Updateskript
-# docker install
-# ===========================
+# 26.05.2024
+# Docker Installer
+#
+# =====================#
+# ┓                 ┓  #
+# ┣┓┏┓┏┏┓┏┓┏┳┓┏┓┏┓┏┓┃┏ #
+# ┗┛┗┻┗┗┛┛┗┛┗┗┗┻┛ ┗ ┛┗ #
+# =====================#
 
 apt update
 apt install curl

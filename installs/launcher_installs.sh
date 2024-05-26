@@ -1,8 +1,14 @@
 #!/bin/bash
 
-# Mareks Launcher Installs
-# VERSION="31.08.2023"
-# ===========================
+# Mareks Updateskript
+# 26.05.2024
+# Launcher Installs Menu
+VERSION="26.05.2024"
+# =====================#
+# ┓                 ┓  #
+# ┣┓┏┓┏┏┓┏┓┏┳┓┏┓┏┓┏┓┃┏ #
+# ┗┛┗┻┗┗┛┛┗┛┗┗┗┻┛ ┗ ┛┗ #
+# =====================#
 
 menu=$( \
     whiptail \
