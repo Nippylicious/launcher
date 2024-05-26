@@ -31,9 +31,9 @@ Weiss='\033[0;37m'      # Weiss
 clear
 
 # Abfrage worüber Upgrade durchgeführt werden soll
-Abfrage_Welcher_Upgrader=$( \
+Abfrage_Welcher_Paketdienst=$( \
 	whiptail \
-	--title "Welcher Upgradedienst soll genutzt werden?"\
+	--title "Welcher Paketdienst soll genutzt werden?"\
     --cancel-button "Abbruch"\
 	--menu ""\
 	11 80 4 \
@@ -42,7 +42,7 @@ Abfrage_Welcher_Upgrader=$( \
 	 3>&1 1>&2 2>&3)
 
 # Auswertung
-case $Abfrage_Welcher_Upgrader in
+case $Abfrage_Welcher_Paketdienst in
 	Nala)   \
             if command -v nala > /dev/null 2>&1; then
                 echo -e "${Gruen}Nala ist bereits installiert${FarbeReset}"
@@ -54,21 +54,26 @@ case $Abfrage_Welcher_Upgrader in
             fi \
             &&
             clear
-            nala upgrade -y
-            # Info Ausgabe
-            whiptail --msgbox "das System wurde aktualisiert" 8 33
+            $Abfrage_Welcher_Paketdienst=nala
             ;;
 
 	APT)    \
-		    apt upgrade -y
-            # Info Ausgabe
-            whiptail --msgbox "das System wurde aktualisiert" 8 33
+		    $Abfrage_Welcher_Paketdienst=apt
 		    ;;
 
 	*)      \
             echo -e "${Rot}...da ist was schief gelaufen${FarbeReset}"
             ;;
 esac
+
+# Upgrade durchführen 
+$Abfrage_Welcher_Paketdienst upgrade -y
+
+# Variable Löschen
+unset Abfrage_Welcher_Paketdienst
+
+# Info Ausgabe
+whiptail --msgbox "das System wurde aktualisiert" 8 33
 
 # Launcher Aufrufen
 ./launcher.sh

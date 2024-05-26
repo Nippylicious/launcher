@@ -31,9 +31,9 @@ Weiss='\033[0;37m'      # Weiss
 clear
 
 Abfrage worüber Updates Auflisten
-Abfrage_Welcher_Updater=$( \
+Abfrage_Welcher_Paketdienst=$( \
 	whiptail \
-	--title "Welcher Updatedienst soll genutzt werden?"\
+	--title "Welcher Paketdienst soll genutzt werden?"\
     --cancel-button "Abbruch"\
 	--menu ""\
 	11 80 4 \
@@ -42,7 +42,7 @@ Abfrage_Welcher_Updater=$( \
 	 3>&1 1>&2 2>&3)
 
 # Auswertung
-case $Abfrage_Welcher_Updater in
+case $Abfrage_Welcher_Paketdienst in
 	Nala)   \
             if command -v nala > /dev/null 2>&1; then
                 echo -e "${Gruen}Nala ist bereits installiert${FarbeReset}"
@@ -54,23 +54,27 @@ case $Abfrage_Welcher_Updater in
             fi \
             &&
             clear
-            nala list --upgradeable > updates.log 2> /dev/null
-            # Info Ausgabe
-            whiptail --title "Verfuegbare Updates" --textbox --scrolltext updates.log 38 100 #Breite Höhe
-            rm updates.log
+            $Abfrage_Welcher_Paketdienst=nala
             ;;
 
 	APT)    \
-		    apt list --upgradeable > updates.log 2> /dev/null
-            # Info Ausgabe
-            whiptail --title "Verfuegbare Updates" --textbox --scrolltext updates.log 38 100 #Breite Höhe
-            rm updates.log
+            $Abfrage_Welcher_Paketdienst=apt
 		    ;;
 
 	*)      \
             echo -e "${Rot}...da ist was schief gelaufen${FarbeReset}"
             ;;
 esac
+
+# Upgrade durchführen 
+$Abfrage_Welcher_Paketdienst list --upgradeable > updates.log 2> /dev/null
+
+# Variable Löschen
+unset Abfrage_Welcher_Paketdienst
+
+# Info Ausgabe
+whiptail --title "Verfuegbare Updates" --textbox --scrolltext updates.log 38 100 #Breite Höhe
+rm updates.log
 
 # Launcher Aufrufen
 ./launcher.sh
