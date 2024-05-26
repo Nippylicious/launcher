@@ -30,7 +30,7 @@ case $menu in
     # UPDATER
 	01)
 		clear
-        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/launcher_updates.sh)"
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/updates/launcher_updates.sh)"
 	;;
 
     # INSTALLER

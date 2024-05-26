@@ -56,11 +56,9 @@ case $Abfrage_Welcher_Paketdienst in
             clear
             $Abfrage_Welcher_Paketdienst=nala
             ;;
-
 	APT)    \
             $Abfrage_Welcher_Paketdienst=apt
 		    ;;
-
 	*)      \
             echo -e "${Rot}...da ist was schief gelaufen${FarbeReset}"
             ;;

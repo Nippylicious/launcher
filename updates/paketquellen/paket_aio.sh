@@ -2,7 +2,7 @@
 
 # Mareks Updateskript
 # 26.05.2024
-# APT Upgrade
+# APT AIO | Update & Upgrade
 #
 # =====================#
 # ┓                 ┓  #
@@ -56,17 +56,16 @@ case $Abfrage_Welcher_Paketdienst in
             clear
             $Abfrage_Welcher_Paketdienst=nala
             ;;
-
 	APT)    \
-		    $Abfrage_Welcher_Paketdienst=apt
+            $Abfrage_Welcher_Paketdienst=apt
 		    ;;
-
 	*)      \
             echo -e "${Rot}...da ist was schief gelaufen${FarbeReset}"
             ;;
 esac
 
 # Upgrade durchführen 
+$Abfrage_Welcher_Paketdienst update
 $Abfrage_Welcher_Paketdienst upgrade -y
 
 # Variable Löschen
