@@ -17,12 +17,12 @@ menu=$( \
         --cancel-button "Beenden" \
         --menu " \n Bitte eine Funktion waehlen" 20 64 9 \
             "01" "  SYSTEM      | ALL-IN-ONE System Updater" \
-	    "02" "  SYSTEM      | Paketquellen aktualisieren" \
+	        "02" "  SYSTEM      | Paketquellen aktualisieren" \
             "03" "  SYSTEM      | Verfuegbare Updates anzeigen" \
             "04" "  SYSTEM      | Systemupgrade durchfuehren" \
             "05" "  PiHole      | aktualisieren" \
             "06" "  ioBroker    | NodeJS aktualisieren"\
-	    "07" "  ioBroker    | JS-Controller aktualisieren"\
+	        "07" "  ioBroker    | JS-Controller aktualisieren"\
             "08" "  Portainer   | aktualisieren"\
             "09" "  Launcher    | aktualisieren"\
         3>&1 1>&2 2>&3)
@@ -39,10 +39,11 @@ case $menu in
 	bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/apt_aio.sh)"
  	;;
 
-    # apt update
+    # Paket Update
 	02)
 	clear
-        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/apt_update.sh)"
+        # 26.05.2024 | bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/apt_update.sh)"
+        bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/apt/paket_update.sh)"
 	;;
 
     # apt list --upgradeable
