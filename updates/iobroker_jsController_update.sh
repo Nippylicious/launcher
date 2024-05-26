@@ -1,8 +1,14 @@
 #!/bin/bash
-#
+
 # Mareks Updateskript
-# iobroker-jsController-update
-# ===========================
+# 26.05.2024
+# jsController Update
+#
+# =====================#
+# ┓                 ┓  #
+# ┣┓┏┓┏┏┓┏┓┏┳┓┏┓┏┓┏┓┃┏ #
+# ┗┛┗┻┗┗┛┛┗┛┗┗┗┻┛ ┗ ┛┗ #
+# =====================#
 
 echo "es wird nach aktuelleren Paketquellen gesucht... Bitte warten"
 apt update

@@ -1,8 +1,14 @@
 #!/bin/bash
-#
+
 # Mareks Updateskript
-# portainer-update
-# ===========================
+# 26.05.2024
+# Portainer Update
+#
+# =====================#
+# ┓                 ┓  #
+# ┣┓┏┓┏┏┓┏┓┏┳┓┏┓┏┓┏┓┃┏ #
+# ┗┛┗┻┗┗┛┛┗┛┗┗┗┻┛ ┗ ┛┗ #
+# =====================#
 
 apt update
 docker stop portainer

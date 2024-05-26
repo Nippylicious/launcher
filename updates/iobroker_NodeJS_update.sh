@@ -1,9 +1,14 @@
 #!/bin/bash
-#
+
 # Mareks Updateskript
-# iobroker-NodeJS-update
+# 26.05.2024
+# ioBroker NodeJS Update
 VERSION=18 #Aktuelle NodeJS Version
-# ===========================
+# =====================#
+# ┓                 ┓  #
+# ┣┓┏┓┏┏┓┏┓┏┳┓┏┓┏┓┏┓┃┏ #
+# ┗┛┗┻┗┗┛┛┗┛┗┗┗┻┛ ┗ ┛┗ #
+# =====================#
 
 echo "es wird nach aktuelleren Paketquellen gesucht... Bitte warten"
 apt update

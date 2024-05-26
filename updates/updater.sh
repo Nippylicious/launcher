@@ -1,9 +1,14 @@
 #!/bin/bash
-#
+
 # Mareks Updateskript
-# update
-VERSION="31.08.2023"
-# ===========================
+# 26.05.2024
+# Updater
+VERSION="26.05.2024"
+# =====================#
+# ┓                 ┓  #
+# ┣┓┏┓┏┏┓┏┓┏┳┓┏┓┏┓┏┓┃┏ #
+# ┗┛┗┻┗┗┛┛┗┛┗┗┗┻┛ ┗ ┛┗ #
+# =====================#
 
 rm launcher.sh
 wget https://github.com/Nippylicious/launcher/raw/main/launcher.sh

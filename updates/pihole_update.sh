@@ -1,8 +1,14 @@
 #!/bin/bash
-#
+
 # Mareks Updateskript
-# pihole-update
-# ===========================
+# 26.05.2024
+# PiHole Update
+#
+# =====================#
+# ┓                 ┓  #
+# ┣┓┏┓┏┏┓┏┓┏┳┓┏┓┏┓┏┓┃┏ #
+# ┗┛┗┻┗┗┛┛┗┛┗┗┗┻┛ ┗ ┛┗ #
+# =====================#
 
 pihole -up
 whiptail --msgbox "PiHole wurde aktualisiert" 8 30
