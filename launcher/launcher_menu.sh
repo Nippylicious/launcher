@@ -10,6 +10,22 @@ VERSION="26.05.2024"
 # ┗┛┗┻┗┗┛┛┗┛┗┗┗┻┛ ┗ ┛┗ #
 # =====================#
 
+# Funktion für Dateicheck
+function check_file {
+    [ -f "$1" ]
+    return $?
+}
+
+# Abfrage
+if check_file ~/.einstellung_paketdienst; then
+    # Wenn vorhanden, weiter zum Launcher
+    : # Leere Operation
+else
+    # Wenn nicht vorhanden, dann erstmal zu den Einstellungen
+    bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/einstellungen/paketdienst.sh)"
+fi
+
+
 menu=$( \
     whiptail \
         --backtitle "Version $VERSION" \
