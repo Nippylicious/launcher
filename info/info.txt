@@ -4,7 +4,7 @@ Was wird gemacht?
 2. ein Backup wird erstellt
 3. das Update wird durchgeführt
 4. Probleme werden behoben und im Anschluss wird ioBroker wieder gestartet
-5. geduldig warten!!!
+5. geduldig warten...
 
 Je nach Backupgröße, Schreibgeschwindigkeit kann es paar minuten dauern!
 Der Bildschirm ist und bleibt in dieser Zeit Schwarz - GEDULD
