@@ -33,7 +33,7 @@ clear
 # Abfrage worüber Upgrade durchgeführt werden soll
 Abfrage_Welcher_Paketmanager=$( \
 	whiptail \
-	--title "Welcher Paketdienst soll genutzt werden?"\
+	--title "Welcher Paketmanager soll genutzt werden?"\
     --cancel-button "Abbruch"\
 	--menu ""\
 	11 80 4 \
