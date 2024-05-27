@@ -23,6 +23,7 @@ if check_file ~/.einstellung_paketdienst; then
 else
     # Wenn nicht vorhanden, dann erstmal zu den Einstellungen
     bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/einstellungen/paketdienst.sh)"
+	exit
 fi
 
 
