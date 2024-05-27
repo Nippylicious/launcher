@@ -15,10 +15,11 @@ menu=$( \
         --backtitle "Version $VERSION" \
         --title "Mareks Launcher" \
         --cancel-button "Beenden" \
-        --menu " \n Bitte eine Funktion waehlen" 18 64 8 \
-            "01" "  UPDATER     | Updates durchfuehren" \
-            "02" "  INSTALLER   | Programme Installieren" \
-            "03" "  TOOLS       | Systemtools" \
+        --menu " \n Bitte eine Funktion waehlen" 18 64 9 \
+            "01" "  UPDATER       | Updates durchfuehren" \
+            "02" "  INSTALLER     | Programme Installieren" \
+            "03" "  TOOLS         | Systemtools" \
+			"04" "  EINSTELLUNGEN | Launcher Einstellungen"\
         3>&1 1>&2 2>&3)
 
 #14 60 6
@@ -43,6 +44,12 @@ case $menu in
 	03)
 	    clear
         bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/tools/launcher_tools.sh)"
+	;;
+
+	# EINSTELLUNGEN
+	04)
+		clear
+		bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/einstellungen/paketdienst.sh)"
 	;;
 
 	255)
