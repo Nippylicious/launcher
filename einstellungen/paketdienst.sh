@@ -49,6 +49,7 @@ case $Abfrage_Welcher_Paketdienst in
             else
                 echo -e "${Rot}Nala ist nicht installiert${FarbeReset}"
                 echo -e "Installiere Nala..."
+                apt update
                 apt install nala -y
                 echo -e "${Gruen}Nala installiert${FarbeReset}"
             fi \
