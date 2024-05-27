@@ -2,7 +2,7 @@
 
 # Mareks Updateskript
 # 26.05.2024
-# Paketdienst
+# Paketmanager
 #
 # =====================#
 # ┓                 ┓  #
@@ -31,7 +31,7 @@ Weiss='\033[0;37m'      # Weiss
 clear
 
 # Abfrage worüber Upgrade durchgeführt werden soll
-Abfrage_Welcher_Paketdienst=$( \
+Abfrage_Welcher_Paketmanager=$( \
 	whiptail \
 	--title "Welcher Paketdienst soll genutzt werden?"\
     --cancel-button "Abbruch"\
@@ -42,7 +42,7 @@ Abfrage_Welcher_Paketdienst=$( \
 	 3>&1 1>&2 2>&3)
 
 # Auswertung
-case $Abfrage_Welcher_Paketdienst in
+case $Abfrage_Welcher_Paketmanager in
 	Nala)   \
             if command -v nala > /dev/null 2>&1; then
                 echo -e "${Gruen}Nala ist bereits installiert${FarbeReset}"
@@ -55,10 +55,10 @@ case $Abfrage_Welcher_Paketdienst in
             fi \
             &&
             clear
-            Abfrage_Welcher_Paketdienst=nala
+            Abfrage_Welcher_Paketmanager=nala
             ;;
 	APT)    \
-            Abfrage_Welcher_Paketdienst=apt
+            Abfrage_Welcher_Paketmanager=apt
 		    ;;
 	*)      \
             echo -e "${Rot}...da ist was schief gelaufen${FarbeReset}"
@@ -66,13 +66,13 @@ case $Abfrage_Welcher_Paketdienst in
 esac
 
 # Schreibe Inhalt aus Variable in Datei
-echo "$Abfrage_Welcher_Paketdienst" > ~/.einstellung_paketdienst
+echo "$Abfrage_Welcher_Paketmanager" > ~/.einstellung_paketdienst
 
 # Füge neue Zeile mit Datum in Datei ein 
 #date >> ~/.einstellung_paketdienst
 
 # Info Ausgabe
-whiptail --msgbox "Einstellung $Abfrage_Welcher_Paketdienst gespeichert" 8 33
+whiptail --msgbox "Einstellung $Abfrage_Welcher_Paketmanager gespeichert" 8 33
 
 # Launcher Aufrufen
 ./launcher.sh

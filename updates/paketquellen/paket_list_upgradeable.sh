@@ -2,7 +2,7 @@
 
 # Mareks Updateskript
 # 26.05.2024
-# APT Updates Auflisten
+# Updates Auflisten
 #
 # =====================#
 # ┓                 ┓  #
@@ -31,10 +31,10 @@ Weiss='\033[0;37m'      # Weiss
 clear
 
 # Einstelungsdatei auslesen und in Variable schreiben
-Abfrage_Welcher_Paketdienst=$(cat ~/.einstellung_paketdienst)
+Abfrage_Welcher_Paketmanager=$(cat ~/.einstellung_paketdienst)
 
 # Upgrade durchführen 
-$Abfrage_Welcher_Paketdienst list --upgradeable > updates.log 2> /dev/null
+$Abfrage_Welcher_Paketmanager list --upgradeable > updates.log 2> /dev/null
 
 # Info Ausgabe
 whiptail --title "Verfuegbare Updates" --textbox --scrolltext updates.log 38 100 #Breite Höhe

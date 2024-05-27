@@ -22,7 +22,7 @@ if check_file ~/.einstellung_paketdienst; then
 	echo &> /dev/null
 else
     # Wenn nicht vorhanden, dann erstmal zu den Einstellungen
-    bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/einstellungen/paketdienst.sh)"
+    bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/einstellungen/paketmanager.sh)"
 fi
 
 
@@ -65,7 +65,7 @@ case $menu in
 	# EINSTELLUNGEN
 	04)
 		clear
-		bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/einstellungen/paketdienst.sh)"
+		bash -c "$(wget -qLO - https://github.com/Nippylicious/launcher/raw/main/einstellungen/paketmanager.sh)"
 	;;
 
 	255)

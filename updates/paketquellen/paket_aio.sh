@@ -2,7 +2,7 @@
 
 # Mareks Updateskript
 # 26.05.2024
-# APT AIO | Update & Upgrade
+# AIO | Update & Upgrade
 #
 # =====================#
 # ┓                 ┓  #
@@ -31,11 +31,11 @@ Weiss='\033[0;37m'      # Weiss
 clear
 
 # Einstelungsdatei auslesen und in Variable schreiben
-Abfrage_Welcher_Paketdienst=$(cat ~/.einstellung_paketdienst)
+Abfrage_Welcher_Paketmanager=$(cat ~/.einstellung_paketdienst)
 
 # Upgrade durchführen 
-$Abfrage_Welcher_Paketdienst update
-$Abfrage_Welcher_Paketdienst upgrade -y
+$Abfrage_Welcher_Paketmanager update
+$Abfrage_Welcher_Paketmanager upgrade -y
 
 # Info Ausgabe
 whiptail --msgbox "das System wurde aktualisiert" 8 33

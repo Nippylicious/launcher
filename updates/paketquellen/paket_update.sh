@@ -2,7 +2,7 @@
 
 # Mareks Updateskript
 # 26.05.2024
-# APT Update
+# Update
 #
 # =====================#
 # ┓                 ┓  #
@@ -31,10 +31,10 @@ Weiss='\033[0;37m'      # Weiss
 clear
 
 # Einstelungsdatei auslesen und in Variable schreiben
-Abfrage_Welcher_Paketdienst=$(cat ~/.einstellung_paketdienst)
+Abfrage_Welcher_Paketmanager=$(cat ~/.einstellung_paketdienst)
 
 # Upgrade durchführen 
-$Abfrage_Welcher_Paketdienst update
+$Abfrage_Welcher_Paketmanager update
 
 # Info Ausgabe
 whiptail --msgbox "das System wurde aktualisiert" 8 33
