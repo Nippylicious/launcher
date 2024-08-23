@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Mareks Updateskript
-# 26.05.2024
+# 23.08.2024
 # ioBroker NodeJS Update
-VERSION=18 #Aktuelle NodeJS Version
+VERSION=20 #Aktuelle NodeJS Version
 # =====================#
 # ┓                 ┓  #
 # ┣┓┏┓┏┏┓┏┓┏┳┓┏┓┏┓┏┓┃┏ #
