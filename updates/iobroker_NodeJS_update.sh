@@ -3,7 +3,7 @@
 # Mareks Updateskript
 # 23.08.2024
 # ioBroker NodeJS Update
-VERSION=20 #Aktuelle NodeJS Version
+VERSION=22 #Aktuelle NodeJS Version
 # =====================#
 # ┓                 ┓  #
 # ┣┓┏┓┏┏┓┏┓┏┳┓┏┓┏┓┏┓┃┏ #
